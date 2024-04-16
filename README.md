@@ -58,7 +58,7 @@ The dataset is available in the file sport.txt.
 
 ### Exploratory Analysis
 
-   [Exploratory Analysis](/EDA1.md)
+   [Exploratory Analysis](/ExploratoryAnalysis.md)
    
 ----
 
