@@ -35,7 +35,7 @@ following table of the fitted values.**
 
 **The percentage of the correct fitted values is 63.8%.**
 
-\-***Fit an k-nn model for the gender.***
+- ***Fit an k-nn model for the gender.***
 
 ``` r
 k1<-knn(D[,3:13],D[,3:13], cl=D$Sex,k=3)
@@ -54,12 +54,12 @@ sum(diag(t4))/sum(t4)
 
     ## [1] 0.9752475
 
-**After fitting a k-nn model for the variable sex we have the following
+**After fitting a k-nn model for the variable sex we have the above
 table of the fitted values.**
 
 **The percentage of the correct fitted values is 97.5%**
 
-**Decision tree for the gender**
+- **Decision tree for the gender**
 
 ``` r
 fit<-tree(as.factor(Sex)~.,data=D)
@@ -97,12 +97,11 @@ sum(diag(t7))/sum(t7)
 
     ## [1] 0.9752475
 
-**After fitting a decision tree model, we have the following
-tree-plot**  
+**After fitting a decision tree model, we have the above tree-plot**  
 **The accuracy of the decision tree is 97.5%**
 
-**The predicted gender for a Gym athlete with the mean value for all the
-covariates**
+- **The predicted gender for a Gym athlete with the mean value for all
+  the covariates**
 
 ``` r
 mean(D$LBM)
