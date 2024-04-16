@@ -5,7 +5,7 @@ Poisson log-linear model for response white blood cell count
 (WCC).***
 
 > The Poisson distribution models the rate of occurrence of events,
-> which aligns with the concept of WCC \>representing the rate of white
+> which aligns with the concept of WCC representing the rate of white
 > blood cell occurrence within a given volume of blood.
 
 **We will use the stepwise method both directions with AIC
@@ -14,11 +14,7 @@ covariates.**
 
 - **Model Selection**
 
-So the fitted model is as follows:
-
-**Log(λ)= 0.19SportNetball +0.23SportWPolo + 0.02Hc +0.03BMI -0.01LBM
-+0.01Ht** **So λ = exp{ 0.19SportNetball +0.23SportWPolo + 0.02Hc
-+0.03BMI -0.01LBM +0.01Ht}**
+So the full model is as follows:
 
 ``` r
 D$WCC<-round(D$WCC)
@@ -66,6 +62,12 @@ summary(a)
     ## 
     ## Number of Fisher Scoring iterations: 4
 
+**Log(λ)= 0.19SportNetball +0.23SportWPolo + 0.02Hc +0.03BMI -0.01LBM
++0.01Ht** **So λ = exp{ 0.19SportNetball +0.23SportWPolo + 0.02Hc
++0.03BMI -0.01LBM +0.01Ht}**
+
+- **Exclude the constant from the model**
+
 ``` r
 X=model.matrix(a)
 data=data.frame(D$WCC,X[,-1])
@@ -93,6 +95,8 @@ head(data)
     ## 4 57.18 185.0 74.9
     ## 5 53.20 184.6 64.6
     ## 6 53.77 174.0 63.7
+
+- **Fit the model without the constant**
 
 ``` r
 a1<-glm(data$D.WCC~.-1,data=data, family=poisson)
