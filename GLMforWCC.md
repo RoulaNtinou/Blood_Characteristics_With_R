@@ -576,7 +576,7 @@ dispersiontest(a2, alternative="greater")
 
 > **The Poisson model fits well the data.**
 
-\-**Parameter Interpretation**
+- **Parameter Interpretation**
 
 > exp(0.19) = 1.21, The WCC will be increased by 21% if the sport is
 > Netball compared to BBall(sport), if the other covariates are
