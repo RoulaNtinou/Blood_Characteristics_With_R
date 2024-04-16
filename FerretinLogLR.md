@@ -1,4 +1,4 @@
-FerretinLogLR
+Ferretin Linear Regression with log-transformed data
 ================
 
 ***Multiple Linear Regression for Ferretin with log-transformed data.***
