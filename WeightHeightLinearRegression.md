@@ -1,59 +1,16 @@
-WeightHeightRegression
+Weight And Height Linear Regression
 ================
 
-> Since the R-squared=0.60, that is not very high percentage of
-> variability explained(only 60%).
+***Linear Regression Weight as dependent variable and Height as
+independent variable***
 
-> In addition β0=-126.19 that should be the expected value of Wt when
-> Ht=0, which does not have direct interpretation, and this value(Ht=0)
-> is not possible and outside the observed range.
-
-> So we are going to remove the constant from the model.
-
-- **Exclude the intercept from the model**
+- **Create a scatterplot for Weight and Height variables**
 
 ``` r
-final<-lm(Wt~Ht-1,data=D)
-summary(final)
+plot(D$Wt,D$Ht,cex.lab=1.5, main="Scatterplot", cex.main=3, cex=1.5)
 ```
 
-    ## 
-    ## Call:
-    ## lm(formula = Wt ~ Ht - 1, data = D)
-    ## 
-    ## Residuals:
-    ##     Min      1Q  Median      3Q     Max 
-    ## -24.515  -7.572  -1.502   6.119  44.019 
-    ## 
-    ## Coefficients:
-    ##    Estimate Std. Error t value Pr(>|t|)    
-    ## Ht  0.41850    0.00431   97.11   <2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## Residual standard error: 11.05 on 201 degrees of freedom
-    ## Multiple R-squared:  0.9791, Adjusted R-squared:  0.979 
-    ## F-statistic:  9430 on 1 and 201 DF,  p-value: < 2.2e-16
-
-> **The full model is:** Wt = 0.42Ht + ε , ε ~ N(0,11.05²)
-
-> **Interpretation of parameters** For β1=0.42.
->
-> First of all the p_value for testing whether the parameter is zero, is
-> less than 0.05, so there is a significant effect of Height on
-> Weight.  
-> So each extra cm of Height increases the expected value of Weight by
-> 0.42kg.
->
-> R-squared = 0.98, So 98% of the variability is explained only using
-> the Height as covariate.  
-> Also the predictions are going to be very good.
->
-> Residual standard deviation: σ = 11.05.It measures the precision of
-> the model predictions.  
-> It means that the accuracy of the prediction is 11.05 Kg.  
-> Fitted value ±11.05kg will include 66% of the cases. Fitted value
-> ±22.1kg will include 95% of the cases.
+![](WeightHeightLinearRegression_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 - **Testing for normality, the original variables(Weight and Height)**
 
@@ -120,7 +77,7 @@ cor.test(D$Wt,D$Ht)
 
 > So there is strong linear dependence between Weight and Height.
 
-- **Summarizing the Linear Regression model for Wt and Ht**
+- **Fit the Linear Regression Model**
 
 ``` r
 a<-lm(Wt~Ht,data=D)
@@ -145,3 +102,57 @@ summary(a)
     ## Residual standard error: 8.72 on 200 degrees of freedom
     ## Multiple R-squared:  0.6098, Adjusted R-squared:  0.6079 
     ## F-statistic: 312.6 on 1 and 200 DF,  p-value: < 2.2e-16
+
+> Since the R-squared=0.60, that is not very high percentage of
+> variability explained(only 60%).
+
+> In addition β0=-126.19 that should be the expected value of Wt when
+> Ht=0, which does not have direct interpretation, and this value(Ht=0)
+> is not possible and outside the observed range.
+
+> So we are going to remove the constant from the model.
+
+- **Exclude the intercept from the model**
+
+``` r
+final<-lm(Wt~Ht-1,data=D)
+summary(final)
+```
+
+    ## 
+    ## Call:
+    ## lm(formula = Wt ~ Ht - 1, data = D)
+    ## 
+    ## Residuals:
+    ##     Min      1Q  Median      3Q     Max 
+    ## -24.515  -7.572  -1.502   6.119  44.019 
+    ## 
+    ## Coefficients:
+    ##    Estimate Std. Error t value Pr(>|t|)    
+    ## Ht  0.41850    0.00431   97.11   <2e-16 ***
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Residual standard error: 11.05 on 201 degrees of freedom
+    ## Multiple R-squared:  0.9791, Adjusted R-squared:  0.979 
+    ## F-statistic:  9430 on 1 and 201 DF,  p-value: < 2.2e-16
+
+> **The full model is:** Wt = 0.42Ht + ε , ε ~ N(0,11.05²)
+
+> **Interpretation of parameters** For β1=0.42.
+>
+> First of all the p_value for testing whether the parameter is zero, is
+> less than 0.05, so there is a significant effect of Height on
+> Weight.  
+> So each extra cm of Height increases the expected value of Weight by
+> 0.42kg.
+>
+> R-squared = 0.98, So 98% of the variability is explained only using
+> the Height as covariate.  
+> Also the predictions are going to be very good.
+>
+> Residual standard deviation: σ = 11.05.It measures the precision of
+> the model predictions.  
+> It means that the accuracy of the prediction is 11.05 Kg.  
+> Fitted value ±11.05kg will include 66% of the cases. Fitted value
+> ±22.1kg will include 95% of the cases.
