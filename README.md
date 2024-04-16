@@ -64,11 +64,12 @@ The dataset is available in the file sport.txt.
 
 ### Data Analysis
 
-1. [Linear Regression Weight and Height](/WHLinearRegr.md)
-2. [Stepwise](/StepwiseLR.md)
-3. [LogModel](/LogModel.md)
-4. [Bionominal LR](/BionominalLR.md)
-5. [Tree](/Tree.md)
+1. [Linear Regression Weight and Height](/WeightHeightLinearRegression.md)
+2. [Ferretin Multiple Linear Regression](/FerretinLR.md)
+3. [Ferretin Linear Regression with Log Transformed Data](/FerretinLogLR.md)
+4. [Poisson log-linear model for white blood cell count](/GLMforWCC.md)
+5. [Proportion of white blood cells with Binomial Log Regression](/BinomialForWCC.md)
+6. [Classification for sport and sex](/ClassificationSportSex.md)
 
 ----
 ### Insights
