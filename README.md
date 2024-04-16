@@ -102,6 +102,8 @@ The multiple linear regression model for predicting Ferritin levels and it does 
 
   Using the final model, we can make predictions for specific scenarios, such as predicting the expected amount of white blood cells for a female athlete involved in Gym activities.
 
+
  - **Classification**
+  
   The high accuracy rates of the k-nn model and the decision tree model for predicting sex suggest that the features used in the analysis (e.g., LBM, X.Bfat) are informative for distinguishing between male and female athletes. These features may be important indicators of gender differences in athletic characteristics.
   The LDA model achieved a correct classification rate of 63.8% for predicting sports based on the provided features. While the performance is moderate, it suggests that the model can capture some patterns in the data.
