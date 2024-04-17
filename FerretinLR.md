@@ -373,7 +373,7 @@ true.r2
 3.  Independence of errors  
 4.  Linearity
 
--Normality(QQ-plot)
+- Normality(QQ-plot)
 
 ``` r
 plot(final1, which=2)
