@@ -1,8 +1,6 @@
 Exploratory Analysis
 ================
 
-**Read the Data**
-
 ### Explore Data
 
 **First rows of the data**
