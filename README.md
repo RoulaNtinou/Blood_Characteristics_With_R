@@ -107,3 +107,13 @@ The multiple linear regression model for predicting Ferritin levels and it does 
   
   The high accuracy rates of the k-nn model and the decision tree model for predicting sex suggest that the features used in the analysis (e.g., LBM, X.Bfat) are informative for distinguishing between male and female athletes. These features may be important indicators of gender differences in athletic characteristics.
   The LDA model achieved a correct classification rate of 63.8% for predicting sports based on the provided features. While the performance is moderate, it suggests that the model can capture some patterns in the data.
+
+----
+
+### Recommendations
+
+-  Consider evaluating additional factors that may influence weight, such as gender, or body composition, for a more comprehensive model.
+
+- Consider whether additional non-linear transformations or alternative functional forms for predictors could better capture the relationship with Ferritin levels. Polynomial terms or other non-linear transformations may help address non-normality and improve model fit.
+
+-  Finally explore opportunities for further investigation, model refinement to improve predictive performance and robustness.
