@@ -258,7 +258,7 @@ So the fitted model is as follows:
 3.  Independence of errors  
 4.  Linearity
 
--Plots
+- Plots
 
 ``` r
 par(mfrow=c(2,2))
@@ -270,7 +270,9 @@ plot(rstudent(logmodel), type='l')
 
 ![](FerretinLogLR_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
--Tests 1. Linearity
+- Tests
+
+1.  Linearity
 
 ``` r
 residualPlots(logmodel, plot=F)
