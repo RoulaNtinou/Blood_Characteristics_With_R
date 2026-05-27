@@ -1,3 +1,4 @@
+![alt text](image-url)
 # Blood Characteristics Analysis
 
 ## Table of Contents
