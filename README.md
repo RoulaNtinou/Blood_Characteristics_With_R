@@ -1,4 +1,4 @@
-![alt text](image-url)
+![alt text](https://github.com/RoulaNtinou/Blood_Characteristics_With_R/blob/89e6df64b355d3cd34a10bb87f3cb4eb517554d6/project-blood-characteristics.jpg)
 # Blood Characteristics Analysis
 
 ## Table of Contents
